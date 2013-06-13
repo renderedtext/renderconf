@@ -1,0 +1,461 @@
+/* ==========================================================================
+   Imports
+   ========================================================================== */
+
+@import "saf.typography.css";
+@import "saf.layout.css";
+@import "saf.extras.css";
+
+
+@font-face {
+  font-family: 'ostrich_sansmedium';
+  src: url('../fonts/ostrich-sans/ostrich-regular-webfont.eot');
+  src: url('../fonts/ostrich-sans/ostrich-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/ostrich-sans/ostrich-regular-webfont.woff') format('woff'),
+       url('../fonts/ostrich-sans/ostrich-regular-webfont.ttf') format('truetype'),
+       url('../fonts/ostrich-sans/ostrich-regular-webfont.svg#ostrich_sansmedium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ==========================================================================
+   Generals
+   ========================================================================== */
+
+html {}
+  
+  body {
+    font-family: "Chaparral Pro", "Georgia", serif;
+  }
+
+
+/* ==========================================================================
+   Float clearing (available classes .clear, .overflow-clear, .after-clear)
+   ========================================================================== */
+
+.page-footer:before,
+.page-footer:after
+.speaker:before,
+.speaker:after {
+  content: "";
+  display: table;
+  height: 0;
+  margin: 0;
+  clear: both;
+}
+
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+
+a:link,
+a:visited {
+  color: #ff6536;
+}
+
+a:focus,
+a:hover {}
+
+a:active {}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.page-header {
+  overflow: hidden;
+}
+
+.branding {
+  padding: 1px 28px;
+  font-size: 18px;
+  background-color: #e5edee;
+}
+  
+  .branding img {
+    display: block;
+    margin: 100px auto 0 auto;
+  }
+
+  .branding figcaption {
+    font-size: 1.15em;
+    line-height: 1.75;
+    padding-bottom: 100px;
+  }
+
+.date-place {
+  padding: 1px 0;
+  border-left: 16px solid #dfdfdf;
+  margin-left: -28px;
+}
+  
+  .date-place-content {
+    margin-top: 200px;
+    padding: 24px;
+    line-height: 1;
+    background-color: #f4f4f4;
+    border-left: 16px solid #ccc;
+    margin-left: -16px;
+  }
+
+    .date-place-content strong {
+      display: block;
+      font-family: "ostrich_sansmedium", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+      font-size: 5em;
+      font-weight: normal;
+    }
+
+    .date-place-content small {
+      margin-top: 1em;
+      display: block;
+      font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+      font-size: .85em;
+      text-transform: uppercase;
+    }
+
+      .date-place-content small a {
+        color: #343434;
+        text-decoration: underline;
+      }
+
+      .date-place-content small a:hover,
+      .date-place-content small a:focus {
+        text-decoration: none;
+      }
+
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.page-footer {
+  padding: 80px 0;
+  line-height: 1.75;
+}
+  
+  .page-footer a {
+    color: inherit;
+    text-decoration: underline;
+  }
+
+  .page-footer a:hover,
+  .page-footer a:focus {
+    text-decoration: none;
+  }
+
+  .page-footer small {
+    font-size: .85em;
+    color: #aaa;
+  }
+
+
+/* ==========================================================================
+   About
+   ========================================================================== */
+
+.about-what {
+  padding: 120px 64px;
+}
+
+.loud {
+  font-size: 1.35em;
+  line-height: 2;
+}
+
+.about-what-action {
+  margin-top: 64px;
+}
+
+.twitter-icon {
+  display: block;
+  width: 121px;
+  height: 106px;
+  margin: 0 auto;
+  transition: 0.6s;
+}
+
+/* Hover effect */
+  
+
+.twitter-icon:hover {
+  -webkit-transform: rotateY(360deg);
+     -moz-transform: rotateY(360deg);
+       -o-transform: rotateY(360deg);
+      -ms-transform: rotateY(360deg);
+          transform: rotateY(360deg);
+}
+
+.about-focus {
+  margin-left: -28px;
+  padding: 0 100px 64px 100px;
+  background-color: #db2a2a;
+}
+
+  .about-focus h1 {
+    margin: 0 -100px;
+    height: 100px;
+    font-size: 1.25em;
+    letter-spacing: .5em;
+    text-transform: uppercase;
+    line-height: 100px;
+    color: #fff;
+    background-color: #a31923;
+  }
+
+  .about-focus h1:before,
+  .about-focus h1:after {
+    content: "•"
+  }
+
+  .about-focus figure {
+    margin: 36px 0 64px 0;
+  }
+
+  .about-focus p {
+    font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    line-height: 2;
+    text-transform: uppercase;
+    letter-spacing: .25em;
+    color: #e5edee;
+  }
+
+  .about-focus p:after {
+    content: "";
+    display: block;
+    border-bottom: 2px solid #fff;
+    width: 70%;
+    margin: 64px auto 0 auto;
+  }
+
+
+/* ==========================================================================
+   Break headings
+   ========================================================================== */
+
+.break {
+  margin: 80px 0;
+}
+  
+  .break h1 {
+    height: 176px;
+    line-height: 176px;
+    background: url(../images/break-pattern.png);
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    text-align: center;
+  }
+
+
+/* ==========================================================================
+   Speakers
+   ========================================================================== */
+
+.speaker {
+  margin-top: 80px;
+  /*overflow: hidden;*/
+}
+
+.speaker-photo {
+  position: relative;
+  min-height: 301px;
+}
+  
+  .speaker-photo img {
+    display: block;
+    position: relative; top: -30px;
+  }
+
+  .speaker-photo figcaption {
+    display: block;
+    margin-top: -245px;
+    margin-left: 50px;
+    padding: 36px 0 36px 235px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    background: #db2a2a url(../images/arrow-tail.png) 110% 50% no-repeat;
+    color: #fff;
+  }
+
+  .speaker-about {}
+
+    .speaker-about h1 {
+      font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+      font-size: .85em;
+      text-transform: uppercase;
+      letter-spacing: .2em;
+    }
+
+    .speaker-about p {
+      font-size: 1.1em;
+    }
+
+    .speaker-about .speaker-about-action {
+      font-size: .85em;
+    }
+
+
+/* ==========================================================================
+   Registration
+   ========================================================================== */
+
+.registration {
+  margin-top: 80px;
+  padding: 80px 0;
+  background-color: #f4f4f4;
+}
+  
+  .registration-title {
+    margin: .175em 0 0 0;
+    font-size: 7em;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    text-align: right;
+    word-wrap: break-word;
+  }
+
+  .registration-action {
+    display: block;
+    width: 100%;
+    height: 0;
+    line-height: 1;
+    padding-bottom: 100%;
+    position: relative;
+    border-radius: 999px;
+    background: #ff921e;
+    background: -moz-linear-gradient(top,  #ff921e 0%, #a41923 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff921e), color-stop(100%,#a41923));
+    background: -webkit-linear-gradient(top,  #ff921e 0%,#a41923 100%);
+    background: -o-linear-gradient(top,  #ff921e 0%,#a41923 100%);
+    background: -ms-linear-gradient(top,  #ff921e 0%,#a41923 100%);
+    background: linear-gradient(to bottom,  #ff921e 0%,#a41923 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff921e', endColorstr='#a41923',GradientType=0 );
+  }
+
+    .registration-action-label {
+      display: block;
+      position: absolute; top: 50%; left: 0; right: 0;
+      margin-top: -.5em;
+      text-align: center;
+      font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+      font-size: .85em;
+      text-transform: uppercase;
+      letter-spacing: .2em;
+      color: #fff;
+    }
+
+  .registration-about {
+    margin-top: 80px;
+  }
+
+
+/* ==========================================================================
+   Venue
+   ========================================================================== */
+
+.venue {}
+  
+  .venue-header {
+    margin: 80px 0;
+    text-align: center;
+  }
+
+    .venue-header h1 {
+      margin: 0;
+      font-size: 1.25em;
+      text-transform: uppercase;
+    }
+
+    .venue-header p {
+      margin: .5em 0 0 0;
+    }
+
+  .venue-photo,
+  .venue-map {
+    float: left;
+    width: 50%;
+    height: 0;
+    padding-bottom: 50%;
+  }
+
+  .venue-photo {
+    background: url(../images/venue-photo.jpg) 0 0 no-repeat;
+    background-size: 100%;
+  }
+
+  .venue-map {
+    position: relative;
+  }
+
+    .venue-photo img {
+      display: none;
+    }
+
+    .venue-map iframe {
+      display: block;
+      width: 100% !important;
+      height: 100% !important;
+      position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    }
+
+/* ==========================================================================
+   Breakpoint: 800px
+   ========================================================================== */
+
+@media only screen and (max-width: 800px) {
+  /* Your code here */
+}
+
+
+/* ==========================================================================
+   Breakpoint: 480px
+   ========================================================================== */
+
+@media only screen and (max-width: 480px) {
+  /* Your code here */
+}
+
+
+/* ==========================================================================
+   Target high DPI devices
+   Source URI: https://gist.github.com/3446599 
+   ========================================================================== */
+
+/* ---------------------------------------------------------- */
+/*                                                            */
+/* A media query that captures:                               */
+/*                                                            */
+/* - Retina iOS devices                                       */
+/* - Retina Macs running Safari                               */
+/* - High DPI Windows PCs running IE 8 and above              */
+/* - Low DPI Windows PCs running IE, zoomed in                */
+/* - Low DPI Windows PCs and Macs running Firefox, zoomed in  */
+/* - Android hdpi devices and above                           */
+/* - Android tvdpi devices, including Google Nexus 7          */
+/* - Chrome running on high DPI Macs and PCs                  */
+/* - Opera running on high DPI Macs, PCs and mobile devices   */
+/*                                                            */
+/* Please note that that this code assumes you'll swap a      */
+/* 2× version of your images. If you'd like to supply         */
+/* finer increments, other thresholds might be appropriate.   */
+/*                                                            */
+/* A test for CSS pixel densites can be found here:           */
+/* http://bjango.com/articles/min-device-pixel-ratio/         */
+/*                                                            */
+/*                                  @marcedwards from @bjango */
+/*                                                            */
+/* ---------------------------------------------------------- */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3), 
+       only screen and (-o-min-device-pixel-ratio: 13/10),
+       only screen and (min-resolution: 120dpi) {
+  /* Your code here */
+}
