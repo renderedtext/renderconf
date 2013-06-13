@@ -74,7 +74,8 @@ img {
 }
 
 .branding {
-  padding: 1px 28px;
+  min-height: 592px;
+  padding: 1px 36px;
   font-size: 18px;
   background-color: #e5edee;
 }
@@ -91,6 +92,7 @@ img {
   }
 
 .date-place {
+  min-height: 592px;
   padding: 1px 0;
   border-left: 16px solid #dfdfdf;
   margin-left: -28px;
@@ -100,7 +102,7 @@ img {
     margin-top: 200px;
     padding: 24px;
     line-height: 1;
-    background-color: #f4f4f4;
+    background: #f4f4f4 url(../images/arrow-tail.png) 115% 50% no-repeat;
     border-left: 16px solid #ccc;
     margin-left: -16px;
   }
@@ -108,7 +110,7 @@ img {
     .date-place-content strong {
       display: block;
       font-family: "ostrich_sansmedium", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-      font-size: 5em;
+      font-size: 4.5em;
       font-weight: normal;
     }
 
@@ -329,7 +331,7 @@ img {
     line-height: 1;
     padding-bottom: 100%;
     position: relative;
-    border-radius: 999px;
+    border-radius: 50%;
     background: #ff921e;
     background: -moz-linear-gradient(top,  #ff921e 0%, #a41923 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff921e), color-stop(100%,#a41923));
@@ -352,6 +354,100 @@ img {
       color: #fff;
     }
 
+  .registration-action:active {
+    background: #cf4e15;
+    box-shadow: 0 2px 4px rgba(0,0,0,.25) inset;
+  }
+
+  /* Hover effect */
+
+  .registration-action {
+    /*background: rgba(0,0,0,0.1);*/
+    -webkit-transition: -webkit-transform ease-out 0.1s, background 0.2s;
+    -moz-transition: -moz-transform ease-out 0.1s, background 0.2s;
+    transition: transform ease-out 0.1s, background 0.2s;
+  }
+
+  .registration-action:after {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    content: '';
+    -webkit-box-sizing: content-box; 
+    -moz-box-sizing: content-box; 
+    box-sizing: content-box;
+    top: 0;
+    left: 0;
+    padding: 0;
+    z-index: -1;
+    box-shadow: 0 0 0 2px rgba(0,0,0,.1);
+    opacity: 0;
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  .registration-action:hover {
+    /*background: rgba(0,0,0,0.05);*/
+    -webkit-transform: scale(0.98);
+    -moz-transform: scale(0.98);
+    -ms-transform: scale(0.98);
+    transform: scale(0.98);
+    color: #fff;
+  }
+
+  .registration-action:hover:after {
+    -webkit-animation: sonarEffect 350ms ease-out 75ms;
+    -moz-animation: sonarEffect 350ms ease-out 75ms;
+    animation: sonarEffect 350ms ease-out 75ms;
+  }
+
+  @-webkit-keyframes sonarEffect {
+  0% {
+    opacity: 0.3;
+  }
+  40% {
+    opacity: 0.5;
+    box-shadow: 0 0 0 2px rgba(0,0,0,0.1), 0 0 10px 10px #ff921e, 0 0 0 10px rgba(255,255,255,0.5);
+  }
+  100% {
+    box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #ff921e, 0 0 0 10px rgba(255,255,255,0.5);
+    -webkit-transform: scale(1.25);
+    opacity: 0;
+  }
+}
+@-moz-keyframes sonarEffect {
+  0% {
+    opacity: 0.3;
+  }
+  40% {
+    opacity: 0.5;
+    box-shadow: 0 0 0 2px rgba(0,0,0,0.1), 0 0 10px 10px #ff921e, 0 0 0 10px rgba(0,0,0,0.5);
+  }
+  100% {
+    box-shadow: 0 0 0 2px rgba(0,0,0,0.1), 0 0 10px 10px #ff921e, 0 0 0 10px rgba(0,0,0,0.5);
+    -moz-transform: scale(1.5);
+    opacity: 0;
+  }
+}
+@keyframes sonarEffect {
+  0% {
+    opacity: 0.3;
+  }
+  40% {
+    opacity: 0.5;
+    box-shadow: 0 0 0 2px rgba(0,0,0,0.1), 0 0 10px 10px #ff921e, 0 0 0 10px rgba(0,0,0,0.5);
+  }
+  100% {
+    box-shadow: 0 0 0 2px rgba(0,0,0,0.1), 0 0 10px 10px #ff921e, 0 0 0 10px rgba(0,0,0,0.5);
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
   .registration-about {
     margin-top: 80px;
   }
@@ -370,12 +466,12 @@ img {
 
     .venue-header h1 {
       margin: 0;
-      font-size: 1.25em;
+      font-size: 1.5em;
       text-transform: uppercase;
     }
 
     .venue-header p {
-      margin: .5em 0 0 0;
+      margin: 0;
     }
 
   .venue-photo,
@@ -406,12 +502,123 @@ img {
       position: absolute; top: 0; left: 0; right: 0; bottom: 0;
     }
 
+
+/* ==========================================================================
+   Breakpoint: 960px
+   ========================================================================== */
+
+@media only screen and (max-width: 960px) {
+  
+  .date-place strong {
+    font-size: 3.5em;
+  }
+
+  .loud {
+    font-size: 1.25em;
+  }
+
+  .about-focus p {
+    font-size: .85em;
+  }
+
+  .speaker-photo figcaption {
+    font-size: .85em;
+  }
+
+  .registration-title {
+    font-size: 6em;
+    margin-top: .1em;
+  }
+
+}
+
+
 /* ==========================================================================
    Breakpoint: 800px
    ========================================================================== */
 
 @media only screen and (max-width: 800px) {
-  /* Your code here */
+  
+  .page-header {
+    margin: 0 -28px;
+  }
+
+    .branding,
+    .date-place {
+      min-height: 0;
+    }
+
+    .date-place {
+      margin-left: 0;
+      padding: 0;
+      border-left: none;
+    }
+
+      .date-place-content {
+        margin-left: 0;
+        margin-top: 0;
+        border-left: none;
+        background-image: none;
+        background-color: #d5dddf;
+      }
+
+  .about-focus {
+    margin-right: -28px;
+  }
+
+  .break {
+    margin-top: 0;
+  }
+
+  .registration-title {
+    font-size: 3.5em;
+    text-align: center;
+    margin-bottom: 80px;
+  }
+
+  .registration-action {
+    margin: 0 10%;
+    width: 80%;
+    padding-bottom: 80%;
+  }
+
+  .venue-header p {
+    margin-top: 1em;
+    line-height: 1.25;
+  }
+
+}
+
+
+/* ==========================================================================
+   Breakpoint: 640px
+   ========================================================================== */
+
+@media only screen and (max-width: 640px) {
+  
+  .speaker-photo img {
+    position: static;
+    margin: 0 auto;
+  }
+
+  .speaker-photo figcaption {
+    margin-top: 36px;
+    margin-left: 0;
+    padding: 0;
+    font-size: 2em;
+    text-align: center;
+    color: #db2a2a;
+    background: transparent;
+  }
+
+  .speaker-about {
+    text-align: center;
+  }
+
+  .speaker-about .speaker-about-action {
+    font-size: inherit;
+  }
+
 }
 
 
@@ -420,7 +627,61 @@ img {
    ========================================================================== */
 
 @media only screen and (max-width: 480px) {
-  /* Your code here */
+  
+  .branding {
+    padding: 1px 28px;
+  }
+
+    .branding img {
+      margin-top: 64px;
+    }
+
+    .branding figcaption {
+      padding-bottom: 64px;
+    }
+
+  .date-place strong {
+    font-size: 3em;
+  }
+
+  .about-what {
+    padding: 64px 0 80px 0;
+  }
+
+  .about-focus {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+
+  .about-focus h1 {
+    margin-left: -28px;
+    margin-right: -28px;
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+
+  .break h1 {
+    font-size: 1.75em;
+  }
+
+  .speaker-photo figcaption {
+    font-size: 1.5em;
+  }
+
+  .registration-title {
+    font-size: 1.5em;
+  }
+
+  .venue-title h1 {
+    line-height: 1.25;
+  }
+
+  .venue-photo,
+  .venue-map {
+    width: 100%;
+    padding-bottom: 100%;
+  }
+
 }
 
 
