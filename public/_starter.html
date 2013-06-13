@@ -40,11 +40,7 @@
        chromium.org/developers/how-tos/chrome-frame-getting-started -->
   <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 
-  <header>
-
-    <!-- Header stuff -->
-
-  </header>
+  <div class="lang"><a href="#">EN</a></div>
 
   <div class="grid">
 
@@ -162,66 +158,71 @@
 
   </div> <!-- .grid -->
 
-  <header class="break">
+  <header class="break break-stripes">
     <h1>Raspored</h1>
   </header> <!-- .break -->
 
   <div class="grid">
 
-    <article class="timetable pad">
+    <article class="timetable">
 
-        <table>
+      <div class="pad">
+
+        <table class="responsive">
           <thead>
             <tr>
-              <th>Vreme</th>
-              <th>Soba A</th>
-              <th>Soba B</th>
+              <th><span class="no-show">Vreme</span></th>
+              <th><span class="label">Soba A</span></th>
+              <th><span class="label">Soba B</span></th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>18:00 – 18:45</td>
+              <td class="timetable-timeslot">18:00 – 18:45</td>
               <td>
                 <span class="timetable-speaker">Goran Bajazetov:</span>
-                <span class="timetable-topic">Making Ideas Happen</span>
+                <strong class="timetable-topic">Making Ideas Happen</strong>
               </td>
               <td>
                 <span class="timetable-speaker">Janko i Supruga Jovanović:</span>
-                <span class="timetable-topic">O Dizajnu</span>
+                <strong class="timetable-topic">O Dizajnu</strong>
               </td>
             </tr>
             <tr class="break-row">
-              <td>18:45 – 19:15</td>
-              <td colspan="2">Pauza</td>
+              <td class="timetable-timeslot">18:45 – 19:15</td>
+              <td>Pauza</td>
+              <td>Pauza</td>
             </tr>
             <tr>
-              <td>18:00 – 18:45</td>
+              <td class="timetable-timeslot">18:00 – 18:45</td>
               <td>
                 <span class="timetable-speaker">Goran Bajazetov:</span>
-                <span class="timetable-topic">Making Ideas Happen</span>
+                <strong class="timetable-topic">Making Ideas Happen</strong>
               </td>
               <td>
                 <span class="timetable-speaker">Janko i Supruga Jovanović:</span>
-                <span class="timetable-topic">O Dizajnu</span>
+                <strong class="timetable-topic">O Dizajnu</strong>
               </td>
             </tr>
             <tr>
-              <td>18:00 – 18:45</td>
+              <td class="timetable-timeslot">18:00 – 18:45</td>
               <td>
                 <span class="timetable-speaker">Goran Bajazetov:</span>
-                <span class="timetable-topic">Making Ideas Happen</span>
+                <strong class="timetable-topic">Making Ideas Happen</strong>
               </td>
               <td>
                 <span class="timetable-speaker">Janko i Supruga Jovanović:</span>
-                <span class="timetable-topic">O Dizajnu</span>
+                <strong class="timetable-topic">O Dizajnu</strong>
               </td>
             </tr>
           </tbody>
         </table>
 
-      </article> <!-- .timetable -->
+      </div> <!-- .pad -->
 
-    </div> <!-- .grid -->
+    </article> <!-- .timetable -->
+
+  </div> <!-- .grid -->
 
   <article class="registration">
 
@@ -284,6 +285,7 @@
 
   <!-- JavaScript -->
   <script src="js/jquery-1.9.1.min.js"></script>
+  <script src="js/zurb-responsive-tables/responsive-tables.js"></script>
   <script>
     $(document).ready(function() {
        
