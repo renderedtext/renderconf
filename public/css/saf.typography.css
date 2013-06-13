@@ -232,11 +232,13 @@ input:invalid, textarea:invalid { background-color: #f0dddd; }
 table { border-collapse: collapse; border-spacing: 0; width: 100%; margin: 1em 0; }
 td { vertical-align: top; }
 
+/*
 tr th:first-child,
 tr td:first-child { padding-left: 0; }
 
 tr th:last-child,
 tr td:last-child { padding-right: 0; }
+*/
 
 th { font-size: .75em; text-transform: uppercase; letter-spacing: .15em; text-align: left; border-color: #999; }
 
